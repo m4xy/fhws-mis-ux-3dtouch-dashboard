@@ -12,8 +12,13 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/dashboard.css" rel="stylesheet">
+    <style type="text/css">
+        #radar-chart-div {
+            margin-top: 20px;
+            height: 200px;
+        }
+    </style>
     </head>
-
 <body>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
@@ -86,7 +91,11 @@
             </div>
 
             <h2 class="sub-header">Active Poll (#1337) – Interaktionsdesign von Informationssystemen</h2>
-            <canvas id="myChart"></canvas>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <canvas id="myChart"></canvas>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -102,10 +111,10 @@
     var ctxClosedPolls = document.getElementById("closed-polls").getContext('2d');
 
     var option = {
-        responsive: true,
+        responsive: true
     };
     var data = {
-        labels: ["Eating", "Drinking", "Sleeping", "Designing", "Coding", "Cycling", "Running"],
+        labels: ["🤓", "😮", "😣", "😡", "😴", "😒", "😐"],
         datasets: [
             {
                 label: "My First dataset",
@@ -115,7 +124,7 @@
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(220,220,220,1)",
-                data: [65, 59, 90, 81, 56, 55, 40]
+                data: [11, 7, 4, 2, 2, 1, 4]
             },
             {
                 label: "My Second dataset",
@@ -125,7 +134,7 @@
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
                 pointHighlightStroke: "rgba(151,187,205,1)",
-                data: [28, 48, 40, 19, 96, 27, 100]
+                data: [3, 3, 8, 2, 7, 4, 10]
             }
         ]
     };
